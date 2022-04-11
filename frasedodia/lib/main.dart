@@ -24,10 +24,29 @@ class _MainState extends State<FraseDoDia> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset('assets/logo.png'),
-              Text('Clique abaixo para gerar uma frase'),
+              const Text(
+                'Clique abaixo para gerar uma frase',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
               TextButton(
                 onPressed: () {},
-                child: Text('Nova Frase'),
+                child: Text(
+                  'Nova Frase',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
+                style: TextButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  backgroundColor: Colors.green,
+                  padding: EdgeInsets.all(20),
+                ),
               )
             ],
           ),
